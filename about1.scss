@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$font: 'Ubuntu', sans-serif;
+
+.footer{
+  background-color: white;
+  margin-top: 200px;
+  padding: 10px 10px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  bottom: 0;
+}
+
+.link{
+  display: inline-flex;
+}
+
+#linklogo{
+  display: flex;
+  justify-content: flex-start;
+  height: 23px;
+  margin-right: 7px;
+  width: auto;
+  opacity: 90%;
+}
+
+.footer {
+
+  p{
+    color:black;
+    font-size: 20px;
+    font-family: $font;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+  }
+ 
+  a{
+    font-size: 20px;
+    font-family: $font;
+    font-weight: bold;
+    color: rgb(8, 112, 126) !important;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  a:hover{
+    color: rgb(14, 159, 179) !important;
+    transition: 0.5s;
+  }
+} 
+
+.nav_links{
+  list-style: none;
+}
+
+.nav_links > li{
+  display: inline-block;
+  padding: 0px 20px;
+  margin-top: 2%;
+}
+
+ .nav_links 
+ {
+ a:hover{
+  color:#EB6456 !important;
+  transition: 0.5s !important;
+}
+
+ button:hover{
+  background-color: rgba(0, 188, 212, 0.5);
+ transition: 0.3s;
+}
+
+ }
+
+#skill {
+  margin-top: 20px;
+}
+
+%basic {
+  font-weight: bold;
+  font-family: $font;
+  cursor: auto;
+}
+
+.list li{
+  @extend %basic;
+  color: rgb(235, 235, 190) !important;
+}
+.sub-list li{
+@extend %basic;
+color:rgb(224, 131, 131) !important;
+margin-top: 10px;
+background-color: rgba(14, 159, 179,0.5);
+
+}
+
+
+//  -------------------------------------------------------------------------------------------------------
+ 
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #181A1B !important;
+  overflow-x: hidden !important;
+}
+
+.nav_bar{
+  background-color: rgba(34.0, 40.0, 49.0,0.91) !important;
+  height: 10vh !important;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 3% !important;
+  align-items: center !important;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+#logo {
+    cursor: pointer;
+    height: 50px;
+    margin-right: auto;
+}
+
+li,a, button {
+  font-family: $font;
+  font-weight: normal;
+  font-size: 18px;
+  text-decoration: none !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+
+.contact{
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 150px;
+  border: none;
+  border-radius: 50px;
+  margin-left: 35px;
+  margin-top: 15px;
+  background-color: #00bcd4;
+}
+
+a:focus, button:focus {
+outline: none !important;
+}
+
+.burger{
+  display: none;
+}
+
+.burger div{
+height: 1px;
+width: 20px;
+background-color: white;
+margin: 5px;
+}
+
+// ------------------------------------------------------
+.head {
+  margin-top: 10vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: auto;
+  
+}
+
+.about{
+color: #00bcd4;
+font-size: 150px;
+margin-left: 20px;
+}
+
+#para{
+  font-family: $font;
+  font-weight: 10;
+  color: white !important;
+}
+
+#profile{
+ height: 26em;
+ float: left;
+ margin-right: 40px;
+}
+// ------------------------------------------
+
+@media screen and (max-width:910px){
+
+  .head h1{
+    font-size: 80px;
+  }
+
+  .nav_links li{
+    padding: 0px 5px;
+  }
+
+  button {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  .head h1{
+      font-size: 50px;
+  }
+  .nav_links {
+    z-index: 2;
+    position:absolute;
+    top:10vh;
+    height:90vh;
+    right:0px;
+    background-color: rgba(34.0, 40.0, 49.0,0.91);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 0px;
+    width: 50vw;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
